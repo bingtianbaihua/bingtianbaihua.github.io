@@ -16,14 +16,14 @@
   </url>
   
   <url>
-    <loc>http://bingtianbaihua.github.io/</loc>
-    <lastmod>2018-08-26T09:16:41+08:00</lastmod>
+    <loc>http://bingtianbaihua.github.io/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://bingtianbaihua.github.io/tags/</loc>
+    <loc>http://bingtianbaihua.github.io/</loc>
+    <lastmod>2018-08-26T09:16:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
