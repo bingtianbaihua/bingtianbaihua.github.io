@@ -17,6 +17,13 @@
   </url>
   
   <url>
+    <loc>http://bingtianbaihua.github.io/post/about_winter_it/</loc>
+    <lastmod>2016-08-25T09:01:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://bingtianbaihua.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
