@@ -6,19 +6,10 @@
     <description>Recent content in Posts on detry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Aug 2018 19:05:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://bingtianbaihua.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>开篇词</title>
-      <link>http://bingtianbaihua.github.io/post/first-content/</link>
-      <pubDate>Thu, 30 Aug 2018 19:05:48 +0800</pubDate>
-      
-      <guid>http://bingtianbaihua.github.io/post/first-content/</guid>
-      <description>这是我的第一篇博客</description>
-    </item>
     
     <item>
       <title>豆瓣，你的产品迭代速度到底有多慢?</title>
@@ -54,6 +45,15 @@
       
       <guid>http://bingtianbaihua.github.io/post/architecture_talk/</guid>
       <description>当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，</description>
+    </item>
+    
+    <item>
+      <title>博客搬家</title>
+      <link>http://bingtianbaihua.github.io/post/first-content/</link>
+      <pubDate>Wed, 06 Apr 2016 09:01:04 +0000</pubDate>
+      
+      <guid>http://bingtianbaihua.github.io/post/first-content/</guid>
+      <description>博客搬家 这次真的决定从网易博客搬家了。其实很久都不迁移，不是因为我懒，而是因为之前很早就在网易博客写博客。大概大一大二是在网易博客上写一些心</description>
     </item>
     
   </channel>
