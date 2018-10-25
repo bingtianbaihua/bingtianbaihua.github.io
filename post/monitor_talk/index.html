@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>当我在聊架构的时候，我在聊什么 - detry&#39;s blog</title>
+  <title>聊聊监控的设计与开发 - detry&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="detry" />
-  <meta name="description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，" />
+  <meta name="description" content="监控是一门学科！ 
+" />
 
   <meta name="keywords" content="detry, blog" />
 
@@ -29,7 +30,7 @@
 <meta name="generator" content="Hugo 0.47.1" />
 
 
-<link rel="canonical" href="http://bingtianbaihua.github.io/post/architecture_talk/" />
+<link rel="canonical" href="http://bingtianbaihua.github.io/post/monitor_talk/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -49,25 +50,31 @@
 
 
 
-<meta property="og:title" content="当我在聊架构的时候，我在聊什么" />
-<meta property="og:description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，" />
+<meta property="og:title" content="聊聊监控的设计与开发" />
+<meta property="og:description" content="监控是一门学科！
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://bingtianbaihua.github.io/post/architecture_talk/" /><meta property="article:published_time" content="2016-08-12T10:01:04&#43;00:00"/>
-<meta property="article:modified_time" content="2016-08-12T10:01:04&#43;00:00"/>
-<meta itemprop="name" content="当我在聊架构的时候，我在聊什么">
-<meta itemprop="description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，">
+<meta property="og:url" content="http://bingtianbaihua.github.io/post/monitor_talk/" /><meta property="article:published_time" content="2016-08-12T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-08-12T00:00:00&#43;00:00"/>
+<meta itemprop="name" content="聊聊监控的设计与开发">
+<meta itemprop="description" content="监控是一门学科！
+
+">
 
 
-<meta itemprop="datePublished" content="2016-08-12T10:01:04&#43;00:00" />
-<meta itemprop="dateModified" content="2016-08-12T10:01:04&#43;00:00" />
-<meta itemprop="wordCount" content="800">
+<meta itemprop="datePublished" content="2016-08-12T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-08-12T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1266">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="当我在聊架构的时候，我在聊什么"/>
-<meta name="twitter:description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，"/>
+<meta name="twitter:title" content="聊聊监控的设计与开发"/>
+<meta name="twitter:description" content="监控是一门学科！
+
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,7 +137,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">当我在聊架构的时候，我在聊什么</h1>
+      <h1 class="post-title">聊聊监控的设计与开发</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2016-08-12 </span>
@@ -146,7 +153,24 @@
   <h2 class="post-toc-title">Contents</h2>
   
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#监控是一门学科">监控是一门学科！</a>
+<ul>
+<li>
+<ul>
+<li><a href="#1-实时监控">1.实时监控</a></li>
+<li><a href="#2-离线数据统计">2.离线数据统计</a></li>
+<li><a href="#3-报警管理">3.报警管理</a></li>
+<li><a href="#4-用户管理">4.用户管理</a></li>
+<li><a href="#5-分布式追踪">5.分布式追踪</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
   </div>
 </div>
 
@@ -155,24 +179,45 @@
 
     
     <div class="post-content">
-      <p>当我在聊架构的时候，我在装逼。</p>
+      <h2 id="监控是一门学科">监控是一门学科！</h2>
 
-<p>没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，并带上自己“有见解”的评论，展现自己的架构经验是多么的丰富，仿佛身经百战一般！自己绞尽脑汁想的话发出去后，就等着朋友圈一群“脑残粉”来瞻仰你！！！</p>
-
-<hr />
-
-<p>现在想想，自己是多么的幼稚。装逼到这种地步，也是被自己彻底的折服了。其实我敢打包票，工作中生活中遇到的人，如果他在大谈架构之道的，多半是在装逼，其实并没什么干货。</p>
+<p></p>
 
 <hr />
 
-<p>记得上一次回学校考试，有个同学找我聊了很久。他就是我上面说的那种人，整天转发一堆“架构文”，找我聊天的目的很明显，想从我这里吸取某些架构上的个人见解。呵呵&hellip;.我不是大牛，只是刚刚踏出校门的小菜鸟，虽然架构文章看的不少，但是要说经验，真的没有。所以，我并不能提供什么独到的见解。一番聊天之后，我还顺口说了句先老老实实把代码写好吧，别谈那些有的没的虚的，大家都想着做架构师，谁来写代码呢，你说是不？</p>
-
-<p>“架构潮”的盛行其实原因很简单，现在大家都很浮躁。不少程序员不想写代码，想快速成功，想轻松生活，想为公司指点江山， 程序员的最高境界，差不多就是架构师了吧，于是很多人在能力还没到的时候，就去各种装逼谈架构。我不反对看这方面的文章，但是，前提是，你的代码已经写的足够好，你手头上的事情已经完美的完成，你写过牛逼的github项目代码，你懂一堆设计模式并能灵活运用于公司大型项目，你深知语音的底层机制并懂得如何优化代码，你算法，数据库，统计分析，前后端测试运维样样尝遍，那时再来谈架构！</p>
+<p>我敢这样说，是因为监控，一直是所有的公司放在战略地位的一个项目。可以说，监控是定位问题，宏观决策，挖掘用户行为的一个项目，它庞大复杂，与众多服务器交互。一个监控平台，需要做好，需要分布式，大数据处理工具，日志收集工具，消息中间件（我们用kafka），后端逻辑处理（java），前端界面展示（bootstrap，echarts,python，jinjia2等），分布式追踪系统（zapkin，可以参阅google dapper论文）&hellip;&hellip;</p>
 
 <hr />
 
-<p>作为一个实习生，我觉得目前什么乱七八糟的“架构”与我无关，什么某某公司**年架构演变之道，我略微扫一扫，目前只会去了解了解，但不会太深究，因为大部分看完就忘。这与有无野心和梦想无关，只是我觉得眼下最重要的是，踏踏实实的事情做好，把代码写好，就更近了一步了！不是么？</p>
+<p>监控是庞大的，要设计好并不是那么容易。说到世面上好的开源监控项目，就数大众点评的cat了，github上有项目源码。但是我没有用cat，一来我觉得不是特别适合我们的业务场景，二来文档真是太他妈少了，接了半天都接不上去，也不知道啥问题，而且只支持jdk1.6。 我去，<strong>1.6啊</strong>，这1.9都快出来了好嘛，一看就是作者懒得维护了，不用！！怒而自己开发去！！！据说小米开源的Open-Falcon也不错，但是那个是监控机器的好嘛大哥，我这里说的主要是针对日志来做业务监控，当然也会涉及部分的机器监控，其原理应该和open-falcon和 zabbix一样的。</p>
 
+<hr />
+
+<p>好了，说了一堆废话，我就具体列几个大点，来说说监控的几个要点：</p>
+
+<h4 id="1-实时监控">1.实时监控</h4>
+
+<p>对于业务来说，实时性是很重要的，还有，定位5xx量，服务器故障，实时都是一个必须要考虑的。我用的是storm来做实时，通过storm传输数据处理后放入自己建的nginx表，然后定时的刷新数据实时图标展现。</p>
+
+<h4 id="2-离线数据统计">2.离线数据统计</h4>
+
+<p>历史数据也是超有挖掘价值，于是，每天，或者每小时，对历史数据做统计，<strong>比如5xx量，比如访问量，比如并发请求数，比如响应时间。</strong>这些指标你可以自己定，我是给每个url定义了这些指标，当然指标可以扩展。统计出来后持久化，方便以后自己和公司所有人查看。离线数据统计中，需要统计日报，周报，月报，用好定时任务框架，可以方便自己工作。用好echarts插件，可以快速显示数据的变化趋势。</p>
+
+<h4 id="3-报警管理">3.报警管理</h4>
+
+<p>定时的比对数据的情况，考虑环比，同比，差值，单值等。数据不对，定时报警，报警的项目指明什么系统，什么url，什么异常，阈值多少，实际值多少。主要涉及到了发邮件，发短信，打电话三项发到对应的负责人那边。</p>
+
+<h4 id="4-用户管理">4.用户管理</h4>
+
+<p>我这里做的用户管理，主要是针对报警用的，因为要发到对应人那边。用户的管理要考虑到组的情况，因为有时候报警是发到组里的。后期会考虑做权限控制。</p>
+
+<h4 id="5-分布式追踪">5.分布式追踪</h4>
+
+<p>这个我只涉及了一点，具体的原理，就是aop，分析一个请求的调用链，看哪个地方耗时最多，这对于优化是非常有帮助的，能快速找到瓶颈。最近在深究这个！！</p>
+
+<hr />
+
+<p>其实还有很多很多，都是一些零零碎碎的功能，后期慢慢补上吧，最近自己一手把监控平台搭建起来，真是太累了，碰到一堆问题，身边会的人也不多，只能各种问别人，问大众点评cat的作者，问知乎大牛，问以前微博认识的一个创业公司的CTO&hellip;&hellip;总之，应该谢谢大家的帮助，让我成长了不少！！后面在慢慢写吧！！！</p>
     </div>
 
     
@@ -198,14 +243,14 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/about_winter_it/">
+          <a class="prev" href="/post/architecture_talk/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">寒冬来了，我们该怎么办</span>
+            <span class="prev-text nav-default">当我在聊架构的时候，我在聊什么</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/monitor_talk/">
-            <span class="next-text nav-default">聊聊监控的设计与开发</span>
+          <a class="next" href="/post/recommend_talk/">
+            <span class="next-text nav-default">我是如何利用推荐算法来定制音乐的</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

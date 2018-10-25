@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>博客搬家 - detry&#39;s blog</title>
+  <title>实时监控的设计思路 - detry&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="detry" />
-  <meta name="description" content="博客搬家 这次真的决定从网易博客搬家了。其实很久都不迁移，不是因为我懒，而是因为之前很早就在网易博客写博客。大概大一大二是在网易博客上写一些心" />
+  <meta name="description" content="概述 监控系统，有四个比较重要的点：实时监控，离线监控统计，报警管理和分布式追踪性能分析。 " />
 
   <meta name="keywords" content="detry, blog" />
 
@@ -29,7 +29,7 @@
 <meta name="generator" content="Hugo 0.47.1" />
 
 
-<link rel="canonical" href="http://bingtianbaihua.github.io/post/first-content/" />
+<link rel="canonical" href="http://bingtianbaihua.github.io/post/monitor_intime/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -49,25 +49,34 @@
 
 
 
-<meta property="og:title" content="博客搬家" />
-<meta property="og:description" content="博客搬家 这次真的决定从网易博客搬家了。其实很久都不迁移，不是因为我懒，而是因为之前很早就在网易博客写博客。大概大一大二是在网易博客上写一些心" />
+<meta property="og:title" content="实时监控的设计思路" />
+<meta property="og:description" content="概述
+
+监控系统，有四个比较重要的点：实时监控，离线监控统计，报警管理和分布式追踪性能分析。
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://bingtianbaihua.github.io/post/first-content/" /><meta property="article:published_time" content="2016-04-06T09:01:04&#43;00:00"/>
-<meta property="article:modified_time" content="2016-04-06T09:01:04&#43;00:00"/>
-<meta itemprop="name" content="博客搬家">
-<meta itemprop="description" content="博客搬家 这次真的决定从网易博客搬家了。其实很久都不迁移，不是因为我懒，而是因为之前很早就在网易博客写博客。大概大一大二是在网易博客上写一些心">
+<meta property="og:url" content="http://bingtianbaihua.github.io/post/monitor_intime/" /><meta property="article:published_time" content="2016-07-05T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-07-05T00:00:00&#43;00:00"/>
+<meta itemprop="name" content="实时监控的设计思路">
+<meta itemprop="description" content="概述
+
+监控系统，有四个比较重要的点：实时监控，离线监控统计，报警管理和分布式追踪性能分析。
+">
 
 
-<meta itemprop="datePublished" content="2016-04-06T09:01:04&#43;00:00" />
-<meta itemprop="dateModified" content="2016-04-06T09:01:04&#43;00:00" />
-<meta itemprop="wordCount" content="445">
+<meta itemprop="datePublished" content="2016-07-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-07-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1422">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="博客搬家"/>
-<meta name="twitter:description" content="博客搬家 这次真的决定从网易博客搬家了。其实很久都不迁移，不是因为我懒，而是因为之前很早就在网易博客写博客。大概大一大二是在网易博客上写一些心"/>
+<meta name="twitter:title" content="实时监控的设计思路"/>
+<meta name="twitter:description" content="概述
+
+监控系统，有四个比较重要的点：实时监控，离线监控统计，报警管理和分布式追踪性能分析。
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,10 +139,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">博客搬家</h1>
+      <h1 class="post-title">实时监控的设计思路</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2016-04-06 </span>
+        <span class="post-time"> 2016-07-05 </span>
         
         
         
@@ -152,7 +161,11 @@
 <ul>
 <li>
 <ul>
-<li><a href="#博客搬家">博客搬家</a></li>
+<li>
+<ul>
+<li><a href="#概述">概述</a></li>
+<li><a href="#storm">Storm</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -165,29 +178,57 @@
 
     
     <div class="post-content">
-      
+      <h4 id="概述">概述</h4>
 
-<h3 id="博客搬家">博客搬家</h3>
+<p>监控系统，有四个比较重要的点：<strong>实时监控，离线监控统计，报警管理和分布式追踪性能分析。</strong>
+</p>
 
-<p>这次真的决定从网易博客搬家了。其实很久都不迁移，不是因为我懒，而是因为之前很早就在网易博客写博客。大概大一大二是在网易博客上写一些心
-情随笔，日记之类的。大三开始在网易博客写技术文章。在网易博客留下来不少东西，略有不舍！</p>
-
-<hr />
-
-<p>不过还是狠下心，走！！！</p>
-
-<p>离开网易博客，是因为我真的有点受不了网易博客的广告。因为广告真多太多太多了。侧边，页脚&hellip;&hellip; 哪里都是，全是无脑广告！</p>
-
-<p>再者，是因为网易博客影响阅读和编辑。先说编辑吧，网易博客目前依然没有markdown的编辑器，都什么年代了。我每次写文章，都要在别的地方写好
-markdown格式的页面，然后把页面内容，记住，是页面内容，不是markdown标签文本，粘贴到网易博客上。</p>
-
-<p>其次是阅读。对于没有注册的用户，阅读你的博客的话会非常费劲，因为网易一直在诱导你成为注册用户，遮挡了要看的文章，像个苍蝇一样，极其恶
-心！</p>
+<p>今天先好好说一下实时监控的思路。有很多不足的地方，可能对工具的使用也有很多不恰当的地方，欢迎指出，毕竟是第一次接触这块。先来说一些重要概念。</p>
 
 <hr />
 
-<p>自己搭个博客，清爽太多了，这里就完全是自己的空间，我想怎么写就怎么写！ 希望自己用心维护好，写出尽量多的干货！！！</p>
+<h4 id="storm">Storm</h4>
 
+<blockquote>
+<p>storm是什么？我理解的storm是流式计算框架。什么叫流？就是数据源源不断的来，然后storm源源不断的处理。类比于hadoop，其实他们两非常相似我觉得。storm的topology相当于hadoop的一个mapreduce，只不过hadoop的mapreduce会结束，而storm的不会。编程方式也很像，hadoop是实现map接口和reduce接口，定义输出类型，storm是实现bolt的execute方法并定义输出类型。  <strong>可能是我个人浅薄的观点，有不准确的地方希望指出</strong></p>
+</blockquote>
+
+<p>storm是twitter开源的框架，前阵子阿里用java重新实现命名jstorm，据说性能比storm提升20%。最近twitter又开源了一个新流式处理框架heron，twitter的说法是性能完爆storm。 别这样，你们发展的太快了，我跟不上节奏 orz！！！</p>
+
+<hr />
+
+<p><strong>storm的基本概念：</strong>
+nimbus：  监控storm集群，提交storm拓扑，杀死进程等等；
+supervisor：  工作节点，nimbus是不处理逻辑的，supervisor来处理，nimbus提交的拓扑就是由supervisor里的（task）来执行。
+worker：是topology的一个进程
+executor：是worker里的一个线程
+task：  对 bolt/spout的抽象</p>
+
+<hr />
+
+<p><img src="/images/storm_work.PNG" alt="storm_work.PNG" /></p>
+
+<p>好了，说完storm的基本概念，就来说监控了。</p>
+
+<p><img src="/images/日志收集的流程.PNG" alt="日志收集的流程.PNG" /></p>
+
+<hr />
+
+<p>因为storm是消费kafka的数据，做到准实时，大概延迟在5~10s内。 首先storm要消费kafka的数据。  所以要配置 storm的spout，设置spout与kafka连接的配置，zookeeper的配置，线程数等，这些配置，我放在mysql的一张表里，每个topology都会先配置对应的数据，然后storm从表里都配置，做到了不在代码层写死。</p>
+
+<p>具体说，就是当我要对一个app作实时监控的时候，我需要先在数据库配置这个app需要的配置数据，就是在数据库插入一条属于自己的配置，包括spout连kafka的线程数，写mysql的线程数，ack数等。 配置好后，需要在zookeeper里新建一个节点，节点的id需要与你在数据库配置的id一致，或者说不一致要能区分出来。nimbus是通过zookeeper与supervisor通信的，他们都是无状态，高可用的。  这些配置完成后，我就像nimbus提交拓扑，通过storm  jar的方式并带上app唯一的 id。  这样，storm就新建了一个新的topology。</p>
+
+<hr />
+
+<p>拓扑建好后，storm就在运行了。  这里说一下我的拓扑。</p>
+
+<p><img src="/images/spout&amp;bolt.PNG" alt="spout&amp;bolt.PNG" /></p>
+
+<p>每一个app的实时监控就是这样的拓扑。log_split bolt做的是日志分割，提取出我需要的数据，log_stat是做一个简单的统计，比如 5xx=500+501+502+503&hellip;   还有需要将日期转化一下，服务器记录的日期跟我们需要的不一样，这些都是需要处理的。等到这些流程结束，就是到入库mysql了。 入库之后，我在监控界面就是每十秒的刷新界面，展现最新的数据图表情况。</p>
+
+<hr />
+
+<p>好了，具体实时就是这样了。之前问过一些大牛，他们说我storm没用好，这个叫伪实时。老实说，我目前也是初学阶段，还有很多东西要学，希望慢慢优化自己的监控项目。</p>
     </div>
 
     
@@ -198,7 +239,7 @@ markdown格式的页面，然后把页面内容，记住，是页面内容，不
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2016-04-06</span>
+    <span class="item-content">2016-07-05</span>
   </p>
   
   
@@ -213,14 +254,14 @@ markdown格式的页面，然后把页面内容，记住，是页面内容，不
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/read_source_code/">
+          <a class="prev" href="/post/statistic_service/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">关于阅读开源代码后的思考</span>
+            <span class="prev-text nav-default">统计服务的三两事</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/mse_give_something/">
-            <span class="next-text nav-default"></span>
+          <a class="next" href="/post/monitor_talk_again/">
+            <span class="next-text nav-default">闲聊分布式日志收集</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>当我在聊架构的时候，我在聊什么 - detry&#39;s blog</title>
+  <title>列举我常用的linux命令 - detry&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="detry" />
-  <meta name="description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，" />
+  <meta name="description" content="今天写写自己常用的linux命令，也是建立在能快速解决问题的基础上，不在于越多越好。 当然我个人非常欣赏能在纯命令行下工作的人，自己也逐渐在这个方向尝试。 " />
 
   <meta name="keywords" content="detry, blog" />
 
@@ -29,7 +29,7 @@
 <meta name="generator" content="Hugo 0.47.1" />
 
 
-<link rel="canonical" href="http://bingtianbaihua.github.io/post/architecture_talk/" />
+<link rel="canonical" href="http://bingtianbaihua.github.io/post/linux_tips/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -49,25 +49,28 @@
 
 
 
-<meta property="og:title" content="当我在聊架构的时候，我在聊什么" />
-<meta property="og:description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，" />
+<meta property="og:title" content="列举我常用的linux命令" />
+<meta property="og:description" content="今天写写自己常用的linux命令，也是建立在能快速解决问题的基础上，不在于越多越好。 当然我个人非常欣赏能在纯命令行下工作的人，自己也逐渐在这个方向尝试。
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://bingtianbaihua.github.io/post/architecture_talk/" /><meta property="article:published_time" content="2016-08-12T10:01:04&#43;00:00"/>
-<meta property="article:modified_time" content="2016-08-12T10:01:04&#43;00:00"/>
-<meta itemprop="name" content="当我在聊架构的时候，我在聊什么">
-<meta itemprop="description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，">
+<meta property="og:url" content="http://bingtianbaihua.github.io/post/linux_tips/" /><meta property="article:published_time" content="2016-09-05T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-09-05T00:00:00&#43;00:00"/>
+<meta itemprop="name" content="列举我常用的linux命令">
+<meta itemprop="description" content="今天写写自己常用的linux命令，也是建立在能快速解决问题的基础上，不在于越多越好。 当然我个人非常欣赏能在纯命令行下工作的人，自己也逐渐在这个方向尝试。
+">
 
 
-<meta itemprop="datePublished" content="2016-08-12T10:01:04&#43;00:00" />
-<meta itemprop="dateModified" content="2016-08-12T10:01:04&#43;00:00" />
-<meta itemprop="wordCount" content="800">
+<meta itemprop="datePublished" content="2016-09-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-09-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="685">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="当我在聊架构的时候，我在聊什么"/>
-<meta name="twitter:description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，"/>
+<meta name="twitter:title" content="列举我常用的linux命令"/>
+<meta name="twitter:description" content="今天写写自己常用的linux命令，也是建立在能快速解决问题的基础上，不在于越多越好。 当然我个人非常欣赏能在纯命令行下工作的人，自己也逐渐在这个方向尝试。
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,10 +133,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">当我在聊架构的时候，我在聊什么</h1>
+      <h1 class="post-title">列举我常用的linux命令</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2016-08-12 </span>
+        <span class="post-time"> 2016-09-05 </span>
         
         
         
@@ -155,24 +158,64 @@
 
     
     <div class="post-content">
-      <p>当我在聊架构的时候，我在装逼。</p>
-
-<p>没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，并带上自己“有见解”的评论，展现自己的架构经验是多么的丰富，仿佛身经百战一般！自己绞尽脑汁想的话发出去后，就等着朋友圈一群“脑残粉”来瞻仰你！！！</p>
-
-<hr />
-
-<p>现在想想，自己是多么的幼稚。装逼到这种地步，也是被自己彻底的折服了。其实我敢打包票，工作中生活中遇到的人，如果他在大谈架构之道的，多半是在装逼，其实并没什么干货。</p>
+      <p>今天写写自己常用的linux命令，也是建立在能快速解决问题的基础上，不在于越多越好。 当然我个人非常欣赏能在纯命令行下工作的人，自己也逐渐在这个方向尝试。
+</p>
 
 <hr />
 
-<p>记得上一次回学校考试，有个同学找我聊了很久。他就是我上面说的那种人，整天转发一堆“架构文”，找我聊天的目的很明显，想从我这里吸取某些架构上的个人见解。呵呵&hellip;.我不是大牛，只是刚刚踏出校门的小菜鸟，虽然架构文章看的不少，但是要说经验，真的没有。所以，我并不能提供什么独到的见解。一番聊天之后，我还顺口说了句先老老实实把代码写好吧，别谈那些有的没的虚的，大家都想着做架构师，谁来写代码呢，你说是不？</p>
+<ol>
+<li><p>系统资源性能查看
+&gt;  top  查看cpu，内存，磁盘等状况
+iotop  查看io的情况
+iostat  同上
+netstat  查看网络情况，查看端口的话，用netstat -apn|grep 端口号， 是否被占用
+lsof -i:端口号  ，也是查看是否被占用的情况
+ps 看系统进程情况，我经常是 ps -ef|grep &ldquo;进程字符串&rdquo;查看tomcat情况
+kill   杀死进程</p></li>
 
-<p>“架构潮”的盛行其实原因很简单，现在大家都很浮躁。不少程序员不想写代码，想快速成功，想轻松生活，想为公司指点江山， 程序员的最高境界，差不多就是架构师了吧，于是很多人在能力还没到的时候，就去各种装逼谈架构。我不反对看这方面的文章，但是，前提是，你的代码已经写的足够好，你手头上的事情已经完美的完成，你写过牛逼的github项目代码，你懂一堆设计模式并能灵活运用于公司大型项目，你深知语音的底层机制并懂得如何优化代码，你算法，数据库，统计分析，前后端测试运维样样尝遍，那时再来谈架构！</p>
+<li><p>文件处理情况
+&gt; mkdir 新建文件夹
+rmdir  删除空文件夹
+rm 删除一个文件，递归删除文件夹，我常用 rm -rf  文件夹
+find   查找文件
+mv  移动或者重命名文件
+ln -s   创建软链接，非常好用，因为对于用中文命名的文件夹，cd到那边是极其麻烦的
+tail -f  查看文件变化
+more/less/cat/tac 都是查看文本的命令</p></li>
+
+<li><p>常用的移动，命令行和打开操作等
+&gt; cd  到某个目录下，直接cd回到home目录下
+  ls和ll，  一个列出文件，另外一个还列出权限等
+ ssh跳到目的主机
+ scp  复制文件到目的主机
+ awk，非常厉害的一个命令，略知一二
+ pwd  查看当前目录
+ alt+f4 关闭
+ alt+f2 查找应用
+ f11 全屏
+ ctrl+u  清除整个命令行
+ctrl+W  清除以空格分割的一个命令行部分
+ctrl+l   清屏
+ctrl+shift+v  粘贴
+ctrl+alt+t  新建一个终端
+ctrl+t  新建一个终端标签页</p></li>
+
+<li><p>文件权限
+&gt;chmod
+chown<br />
+这两个用的不多，但是要知道</p></li>
+</ol>
+
+<p>5.解压缩和压缩
+&gt; 我常用的两个
+    tar -zcvf  源文件   目的文件， 压缩文件
+    tar -zxvf  源文件   目的地址 ，解压文件， -C到指定目录下
+    当然还有zip和unzip，我用的不多。
+    jar -xvf   war包  ，部署java  war包用的</p>
 
 <hr />
 
-<p>作为一个实习生，我觉得目前什么乱七八糟的“架构”与我无关，什么某某公司**年架构演变之道，我略微扫一扫，目前只会去了解了解，但不会太深究，因为大部分看完就忘。这与有无野心和梦想无关，只是我觉得眼下最重要的是，踏踏实实的事情做好，把代码写好，就更近了一步了！不是么？</p>
-
+<p>好了，我暂时能想到的就是这些了，可能有不少遗漏的，后续想到了再慢慢补。用好linux，的确对自己工作效率的提高是有很明显的效果的，希望自己坚持在linux环境下工作！！！</p>
     </div>
 
     
@@ -183,7 +226,7 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2016-08-12</span>
+    <span class="item-content">2016-09-05</span>
   </p>
   
   
@@ -198,14 +241,14 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/about_winter_it/">
+          <a class="prev" href="/post/senior_programer_talk/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">寒冬来了，我们该怎么办</span>
+            <span class="prev-text nav-default">如何定义高级程序员</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/monitor_talk/">
-            <span class="next-text nav-default">聊聊监控的设计与开发</span>
+          <a class="next" href="/post/vim_tips/">
+            <span class="next-text nav-default">Vim使用总结</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

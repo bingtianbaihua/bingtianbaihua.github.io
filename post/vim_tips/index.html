@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>当我在聊架构的时候，我在聊什么 - detry&#39;s blog</title>
+  <title>Vim使用总结 - detry&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="detry" />
-  <meta name="description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，" />
+  <meta name="description" content="用vim也快一年半了，怎么说，快捷键很多，但我平时其实常用的就几个，效率的话，就是基本上变成了纯键盘操作，鼠标依赖的越来越少了。好了废话不多说，我总结一下自己经常用的快捷键，我觉得用好这几个，基本上已经够用了。 至于一些大神用vim来开发项目，那这篇文章还是不适合。 " />
 
   <meta name="keywords" content="detry, blog" />
 
@@ -29,7 +29,7 @@
 <meta name="generator" content="Hugo 0.47.1" />
 
 
-<link rel="canonical" href="http://bingtianbaihua.github.io/post/architecture_talk/" />
+<link rel="canonical" href="http://bingtianbaihua.github.io/post/vim_tips/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -49,25 +49,28 @@
 
 
 
-<meta property="og:title" content="当我在聊架构的时候，我在聊什么" />
-<meta property="og:description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，" />
+<meta property="og:title" content="Vim使用总结" />
+<meta property="og:description" content="用vim也快一年半了，怎么说，快捷键很多，但我平时其实常用的就几个，效率的话，就是基本上变成了纯键盘操作，鼠标依赖的越来越少了。好了废话不多说，我总结一下自己经常用的快捷键，我觉得用好这几个，基本上已经够用了。 至于一些大神用vim来开发项目，那这篇文章还是不适合。
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://bingtianbaihua.github.io/post/architecture_talk/" /><meta property="article:published_time" content="2016-08-12T10:01:04&#43;00:00"/>
-<meta property="article:modified_time" content="2016-08-12T10:01:04&#43;00:00"/>
-<meta itemprop="name" content="当我在聊架构的时候，我在聊什么">
-<meta itemprop="description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，">
+<meta property="og:url" content="http://bingtianbaihua.github.io/post/vim_tips/" /><meta property="article:published_time" content="2016-08-31T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-08-31T00:00:00&#43;00:00"/>
+<meta itemprop="name" content="Vim使用总结">
+<meta itemprop="description" content="用vim也快一年半了，怎么说，快捷键很多，但我平时其实常用的就几个，效率的话，就是基本上变成了纯键盘操作，鼠标依赖的越来越少了。好了废话不多说，我总结一下自己经常用的快捷键，我觉得用好这几个，基本上已经够用了。 至于一些大神用vim来开发项目，那这篇文章还是不适合。
+">
 
 
-<meta itemprop="datePublished" content="2016-08-12T10:01:04&#43;00:00" />
-<meta itemprop="dateModified" content="2016-08-12T10:01:04&#43;00:00" />
-<meta itemprop="wordCount" content="800">
+<meta itemprop="datePublished" content="2016-08-31T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-08-31T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="359">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="当我在聊架构的时候，我在聊什么"/>
-<meta name="twitter:description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，"/>
+<meta name="twitter:title" content="Vim使用总结"/>
+<meta name="twitter:description" content="用vim也快一年半了，怎么说，快捷键很多，但我平时其实常用的就几个，效率的话，就是基本上变成了纯键盘操作，鼠标依赖的越来越少了。好了废话不多说，我总结一下自己经常用的快捷键，我觉得用好这几个，基本上已经够用了。 至于一些大神用vim来开发项目，那这篇文章还是不适合。
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,10 +133,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">当我在聊架构的时候，我在聊什么</h1>
+      <h1 class="post-title">Vim使用总结</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2016-08-12 </span>
+        <span class="post-time"> 2016-08-31 </span>
         
         
         
@@ -155,24 +158,36 @@
 
     
     <div class="post-content">
-      <p>当我在聊架构的时候，我在装逼。</p>
-
-<p>没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，并带上自己“有见解”的评论，展现自己的架构经验是多么的丰富，仿佛身经百战一般！自己绞尽脑汁想的话发出去后，就等着朋友圈一群“脑残粉”来瞻仰你！！！</p>
-
-<hr />
-
-<p>现在想想，自己是多么的幼稚。装逼到这种地步，也是被自己彻底的折服了。其实我敢打包票，工作中生活中遇到的人，如果他在大谈架构之道的，多半是在装逼，其实并没什么干货。</p>
+      <p>用vim也快一年半了，怎么说，快捷键很多，但我平时其实常用的就几个，效率的话，就是基本上变成了纯键盘操作，鼠标依赖的越来越少了。好了废话不多说，我总结一下自己经常用的快捷键，我觉得用好这几个，基本上已经够用了。 至于一些大神用vim来开发项目，那这篇文章还是不适合。
+</p>
 
 <hr />
 
-<p>记得上一次回学校考试，有个同学找我聊了很久。他就是我上面说的那种人，整天转发一堆“架构文”，找我聊天的目的很明显，想从我这里吸取某些架构上的个人见解。呵呵&hellip;.我不是大牛，只是刚刚踏出校门的小菜鸟，虽然架构文章看的不少，但是要说经验，真的没有。所以，我并不能提供什么独到的见解。一番聊天之后，我还顺口说了句先老老实实把代码写好吧，别谈那些有的没的虚的，大家都想着做架构师，谁来写代码呢，你说是不？</p>
-
-<p>“架构潮”的盛行其实原因很简单，现在大家都很浮躁。不少程序员不想写代码，想快速成功，想轻松生活，想为公司指点江山， 程序员的最高境界，差不多就是架构师了吧，于是很多人在能力还没到的时候，就去各种装逼谈架构。我不反对看这方面的文章，但是，前提是，你的代码已经写的足够好，你手头上的事情已经完美的完成，你写过牛逼的github项目代码，你懂一堆设计模式并能灵活运用于公司大型项目，你深知语音的底层机制并懂得如何优化代码，你算法，数据库，统计分析，前后端测试运维样样尝遍，那时再来谈架构！</p>
+<p>首先认识三种模式：
+命令模式： 按ESC到命令模式，这里可以输入各种命令
+插入模式： A，a， I，i，按自己的需要来选择
+可使模式： ctrl+v 进入，我最常用的是列编辑</p>
 
 <hr />
 
-<p>作为一个实习生，我觉得目前什么乱七八糟的“架构”与我无关，什么某某公司**年架构演变之道，我略微扫一扫，目前只会去了解了解，但不会太深究，因为大部分看完就忘。这与有无野心和梦想无关，只是我觉得眼下最重要的是，踏踏实实的事情做好，把代码写好，就更近了一步了！不是么？</p>
+<blockquote>
+<p>ctrl+e和 ctrl+y 分别是光标往下一行和往上一行
+ctrl+d和 ctrl+u  光标往下半页和往上半页
+gg到顶行，G到最后一行
+hjkl 上下左右
+dd删除一行
+x删除字符
+yy复制
+p粘贴
+u撤销， .是重复
+ctrl+v  hjkl  可视编辑
+:/keyword   全局搜索
+:%s/a/b/g   替换</p>
+</blockquote>
 
+<hr />
+
+<p>当然还有很多很多，只是这些是我比较常用的，作为linux下文本编辑的话，我觉得够了，已经能大大提高工作效率了。</p>
     </div>
 
     
@@ -183,7 +198,7 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2016-08-12</span>
+    <span class="item-content">2016-08-31</span>
   </p>
   
   
@@ -198,14 +213,14 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/about_winter_it/">
+          <a class="prev" href="/post/linux_tips/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">寒冬来了，我们该怎么办</span>
+            <span class="prev-text nav-default">列举我常用的linux命令</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/monitor_talk/">
-            <span class="next-text nav-default">聊聊监控的设计与开发</span>
+          <a class="next" href="/post/hot_key_talk/">
+            <span class="next-text nav-default">快捷键提高工作效率</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

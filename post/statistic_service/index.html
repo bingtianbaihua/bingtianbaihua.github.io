@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>统计服务的三两事 - detry&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="detry" />
+  <meta name="description" content="什么是统计服务？不要怕，其实一点都不高深，一点都不高大上，就是一个针对业务监控的项目而已，其实还是监控里的东西，只是这个模块比较特殊，还会有其他项目组的人关心这些数据，所以把它单独做成一个模块．
+
+" />
+
+  <meta name="keywords" content="detry, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.47.1" />
+
+
+<link rel="canonical" href="http://bingtianbaihua.github.io/post/statistic_service/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="统计服务的三两事" />
+<meta property="og:description" content="什么是统计服务？不要怕，其实一点都不高深，一点都不高大上，就是一个针对业务监控的项目而已，其实还是监控里的东西，只是这个模块比较特殊，还会有其他项目组的人关心这些数据，所以把它单独做成一个模块．
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://bingtianbaihua.github.io/post/statistic_service/" /><meta property="article:published_time" content="2016-07-06T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-07-06T00:00:00&#43;00:00"/>
+<meta itemprop="name" content="统计服务的三两事">
+<meta itemprop="description" content="什么是统计服务？不要怕，其实一点都不高深，一点都不高大上，就是一个针对业务监控的项目而已，其实还是监控里的东西，只是这个模块比较特殊，还会有其他项目组的人关心这些数据，所以把它单独做成一个模块．
+
+">
+
+
+<meta itemprop="datePublished" content="2016-07-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-07-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1500">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="统计服务的三两事"/>
+<meta name="twitter:description" content="什么是统计服务？不要怕，其实一点都不高深，一点都不高大上，就是一个针对业务监控的项目而已，其实还是监控里的东西，只是这个模块比较特殊，还会有其他项目组的人关心这些数据，所以把它单独做成一个模块．
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">detry&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">detry&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">统计服务的三两事</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-07-06 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#mysql-的binlog几种模式">MySQL 的binlog几种模式．</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>什么是统计服务？不要怕，其实一点都不高深，一点都不高大上，就是一个针对业务监控的项目而已，其实还是监控里的东西，只是这个模块比较特殊，还会有其他项目组的人关心这些数据，所以把它单独做成一个模块．</p>
+
+<p></p>
+
+<hr />
+
+<p>这里先说一些基本的概念吧．</p>
+
+<h4 id="mysql-的binlog几种模式">MySQL 的binlog几种模式．</h4>
+
+<p>我们知道，mysql是会记录一个表数据的变化的，包括增，删，改都会在日志中记录下来，我们把这个日志叫binlog．我们可以设置mysql记录日志的模式，主要有下面三种．</p>
+
+<blockquote>
+<ol>
+<li>row模式．记录变化的数据，更新前更新后的数据，都会被记录下来．
+２．statement模式．记录执行的ＳＱＬ语句．
+３．mixed模式，混合了row和statement两种模式，在表结构等一些地方用statement，在具体大数据量和一些ＵＵＩＤ这些用row．</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<p>在这里，我设置的是row，且建议用row．
+mysql的binlog里记录了很多我们感兴趣的数据，可以利用好来为我们服务．通过binlog可以知道数据的变化过程．</p>
+
+<p>所以需要一个binlog的增量/订阅消费组件－－－阿里巴巴开源的框架canal．项目地址：<a href="https://github.com/alibaba/canal">https://github.com/alibaba/canal</a></p>
+
+<p>canal的原理很简单，他没有任何其他作用，你就把她想象成一个slave，去增量订阅master的binlog变化．canal连发送功能都没有，所以只要理解为它是一个slave．</p>
+
+<p><img src="/images/mysql_work.PNG" alt="mysql主备复制" /></p>
+
+<hr />
+
+<p><strong>用canal做的统计服务的架构图：</strong></p>
+
+<p><img src="/images/canal-pipe.PNG" alt="ＭySQL+master.png" /></p>
+
+<p>架构解读：
+＞　1. canal 模拟slave，从master主库中读取最新的数据，canal client是自己写的程序，一个线程循环去拉canal 里的数据，并做一些处理，包括将旧值和新值封装成json，处理时间等等．处理完后立马发送到kafka中，然后又是自己的代码正式统计入库并写访问接口．</p>
+
+<p>架构很简单．下面说一下统计服务解决的问题．我们知道，假设一个订单，它从商家开始发单，到最后结束(被取消或者正常完成)，是有很多很多中间状态的，如果没有binlog，我们可能只是知道被取消了多少，正常完成了多少，而不知道其中途状态转化过程．　这个转化过程知道了有什么用呢？我们可以监控，一天有多少单是被商家取消的，有多少单是被配送人放弃的，有多少单是没人接过期的．　知道了这些数据，可以看出业务瓶颈点，待优化的点，我们就可以针对性的做些策略，比如对给商家优惠，给配送人小费等等一些动态策略．　其价值是显而易见的．</p>
+
+<p><img src="/images/stat_talk.jpg" alt="统计服务数据比对-流程图-.jpg" /></p>
+
+<p>注:流程很复杂，这只是一个片段，没有覆盖所有过程．</p>
+
+<hr />
+
+<p>通过binlog，我可以获取到旧值和新值，举例其中一个例子，从status=0  &ndash;&gt; status=1，那边binlog就会记录，这时候，我在canal client处理成我需要的格式后，statistic就从kafka里拉数据，拉到这条记录值，解析json获取旧值和新值，在我的统计表中，对从status=0  &ndash;＞status=1　的记录就添加一条．其他状态类似．</p>
+
+<p>数据库有了统计值，我就可以写接口，查询各个状态的转化数据量了，然后在监控里显示出来．监控中显示哪快取消最多，就针对性的优化，运维，消费，产品各个都会作调整，非常具有价值．</p>
+
+<p>调统计服务的，还有ＢＤ和ＣＲＭ，他们后端工具，要提供显示状态转移的数据量．</p>
+
+<hr />
+
+<p>至此统计服务就结束了，不是特别难．<strong>但是遇到一个问题，问便了能问的人，依然没解决，就是有时候，统计值与BI统计值不一样，偶发，没办法重现问题．这就尴尬了，会是哪一块出问题了呢？ canal client？kafka? statistic代码？还是说mysql binlog和canal本身不可靠？　希望有这方面经验的人指点一二．虽然无伤大雅，但是偶现的数据不对，总让人有点不舒服．</strong></p>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">detry</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2016-07-06</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/language_talk/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">语言到底重不重要</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/monitor_intime/">
+            <span class="next-text nav-default">实时监控的设计思路</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://bingtianbaihua.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://github.com/bingtianbaihua">detry</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/bingtianbaihua">detry</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2016 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">detry</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

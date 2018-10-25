@@ -24,6 +24,20 @@
   </url>
   
   <url>
+    <loc>http://bingtianbaihua.github.io/post/life_think/</loc>
+    <lastmod>2017-04-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/self_disciple/</loc>
+    <lastmod>2017-03-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://bingtianbaihua.github.io/post/evil_city/</loc>
     <lastmod>2017-02-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,8 +45,43 @@
   </url>
   
   <url>
+    <loc>http://bingtianbaihua.github.io/post/new_year/</loc>
+    <lastmod>2017-02-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/senior_programer_talk/</loc>
+    <lastmod>2016-09-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/linux_tips/</loc>
+    <lastmod>2016-09-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/vim_tips/</loc>
+    <lastmod>2016-08-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://bingtianbaihua.github.io/post/hot_key_talk/</loc>
     <lastmod>2016-08-28T10:01:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/net_v_talk/</loc>
+    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -52,8 +101,70 @@
   </url>
   
   <url>
+    <loc>http://bingtianbaihua.github.io/post/monitor_talk/</loc>
+    <lastmod>2016-08-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/recommend_talk/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/select_company/</loc>
+    <lastmod>2016-08-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/language_talk/</loc>
+    <lastmod>2016-08-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/statistic_service/</loc>
+    <lastmod>2016-07-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/monitor_intime/</loc>
+    <lastmod>2016-07-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/monitor_talk_again/</loc>
+    <lastmod>2016-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/read_source_code/</loc>
+    <lastmod>2016-07-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://bingtianbaihua.github.io/post/first-content/</loc>
     <lastmod>2016-04-06T09:01:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://bingtianbaihua.github.io/post/mse_give_something/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

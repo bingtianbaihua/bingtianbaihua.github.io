@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>当我在聊架构的时候，我在聊什么 - detry&#39;s blog</title>
+  <title>关于阅读开源代码后的思考 - detry&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="detry" />
-  <meta name="description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，" />
+  <meta name="description" content="实习以后，虽说做的东西不是太有技术含量，但多少写的代码还是很多很多的，比之前在网易的量大概要多三倍左右。
+
+" />
 
   <meta name="keywords" content="detry, blog" />
 
@@ -29,7 +31,7 @@
 <meta name="generator" content="Hugo 0.47.1" />
 
 
-<link rel="canonical" href="http://bingtianbaihua.github.io/post/architecture_talk/" />
+<link rel="canonical" href="http://bingtianbaihua.github.io/post/read_source_code/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -49,25 +51,31 @@
 
 
 
-<meta property="og:title" content="当我在聊架构的时候，我在聊什么" />
-<meta property="og:description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，" />
+<meta property="og:title" content="关于阅读开源代码后的思考" />
+<meta property="og:description" content="实习以后，虽说做的东西不是太有技术含量，但多少写的代码还是很多很多的，比之前在网易的量大概要多三倍左右。
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://bingtianbaihua.github.io/post/architecture_talk/" /><meta property="article:published_time" content="2016-08-12T10:01:04&#43;00:00"/>
-<meta property="article:modified_time" content="2016-08-12T10:01:04&#43;00:00"/>
-<meta itemprop="name" content="当我在聊架构的时候，我在聊什么">
-<meta itemprop="description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，">
+<meta property="og:url" content="http://bingtianbaihua.github.io/post/read_source_code/" /><meta property="article:published_time" content="2016-07-02T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-07-02T00:00:00&#43;00:00"/>
+<meta itemprop="name" content="关于阅读开源代码后的思考">
+<meta itemprop="description" content="实习以后，虽说做的东西不是太有技术含量，但多少写的代码还是很多很多的，比之前在网易的量大概要多三倍左右。
+
+">
 
 
-<meta itemprop="datePublished" content="2016-08-12T10:01:04&#43;00:00" />
-<meta itemprop="dateModified" content="2016-08-12T10:01:04&#43;00:00" />
-<meta itemprop="wordCount" content="800">
+<meta itemprop="datePublished" content="2016-07-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-07-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="558">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="当我在聊架构的时候，我在聊什么"/>
-<meta name="twitter:description" content="当我在聊架构的时候，我在装逼。 没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，"/>
+<meta name="twitter:title" content="关于阅读开源代码后的思考"/>
+<meta name="twitter:description" content="实习以后，虽说做的东西不是太有技术含量，但多少写的代码还是很多很多的，比之前在网易的量大概要多三倍左右。
+
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,10 +138,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">当我在聊架构的时候，我在聊什么</h1>
+      <h1 class="post-title">关于阅读开源代码后的思考</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2016-08-12 </span>
+        <span class="post-time"> 2016-07-02 </span>
         
         
         
@@ -155,24 +163,47 @@
 
     
     <div class="post-content">
-      <p>当我在聊架构的时候，我在装逼。</p>
+      <p>实习以后，虽说做的东西不是太有技术含量，但多少写的代码还是很多很多的，比之前在网易的量大概要多三倍左右。</p>
 
-<p>没错，就是在装逼，以前在学校，年少轻狂，整天看一些架构性的文章，研究各个公司的架构区别，然后装逼转发到朋友圈，并带上自己“有见解”的评论，展现自己的架构经验是多么的丰富，仿佛身经百战一般！自己绞尽脑汁想的话发出去后，就等着朋友圈一群“脑残粉”来瞻仰你！！！</p>
+<p></p>
 
-<hr />
-
-<p>现在想想，自己是多么的幼稚。装逼到这种地步，也是被自己彻底的折服了。其实我敢打包票，工作中生活中遇到的人，如果他在大谈架构之道的，多半是在装逼，其实并没什么干货。</p>
+<p>代码写的多了，偶尔有时间就会回头去看看。打开自己的代码一看，天呐，这特么是自己写的代码吗？扩展性呢？健壮性呢？高内聚低耦合呢？ 通通不见了，我甚至无法理解当时的我为什么会下此毒手写下这段糟糕的代码。于是开始重构。。。。。。</p>
 
 <hr />
 
-<p>记得上一次回学校考试，有个同学找我聊了很久。他就是我上面说的那种人，整天转发一堆“架构文”，找我聊天的目的很明显，想从我这里吸取某些架构上的个人见解。呵呵&hellip;.我不是大牛，只是刚刚踏出校门的小菜鸟，虽然架构文章看的不少，但是要说经验，真的没有。所以，我并不能提供什么独到的见解。一番聊天之后，我还顺口说了句先老老实实把代码写好吧，别谈那些有的没的虚的，大家都想着做架构师，谁来写代码呢，你说是不？</p>
+<p>在公司里，也发现不少烂代码，不写注释不说，命名也是极其不规范。一个int 型的变量，硬是能取xx，ii这种名字，竟然还是一个号称工作了7年的“互联网老兵”，真是为之羞耻。对于此人的代码，我也看了不少，感觉确实是愧对自己的工作年限。比如：</p>
 
-<p>“架构潮”的盛行其实原因很简单，现在大家都很浮躁。不少程序员不想写代码，想快速成功，想轻松生活，想为公司指点江山， 程序员的最高境界，差不多就是架构师了吧，于是很多人在能力还没到的时候，就去各种装逼谈架构。我不反对看这方面的文章，但是，前提是，你的代码已经写的足够好，你手头上的事情已经完美的完成，你写过牛逼的github项目代码，你懂一堆设计模式并能灵活运用于公司大型项目，你深知语音的底层机制并懂得如何优化代码，你算法，数据库，统计分析，前后端测试运维样样尝遍，那时再来谈架构！</p>
+<pre><code>public  void  calDailyJob(){
+         if(getxxx()){
+              //todo
+        }else if(getxxx()){
+               //todo
+        }else if(getxxx()){
+              //todo
+        }
+}
+</code></pre>
 
 <hr />
 
-<p>作为一个实习生，我觉得目前什么乱七八糟的“架构”与我无关，什么某某公司**年架构演变之道，我略微扫一扫，目前只会去了解了解，但不会太深究，因为大部分看完就忘。这与有无野心和梦想无关，只是我觉得眼下最重要的是，踏踏实实的事情做好，把代码写好，就更近了一步了！不是么？</p>
+<p>这种烂代码，光看就知道，此人不知道方法调用是需要耗费时间的，且没有太多的模块化思维，写的代码真是一坨屎。 这个时候明显可以将方法返回值传给一个变量。</p>
 
+<hr />
+
+<p>算了，不说了。当我看了Apache  common包下的几个类的源码，不能说颠覆了自己写代码的思维，但至少看了大牛是怎么最简化代码的。比如我举个例子，</p>
+
+<pre><code>     public  boolean   isBlank(String s){
+              int len=0;
+              if(s==null||(len=s.length)==0){
+              }
+
+              for(int i=0;i&lt;len;i++){
+                    //todo
+              }
+      }
+</code></pre>
+
+<p>这段代码，在判空的时候，就把字符串的长度保存在一个变量里，最小化了方法的调用，这才是好代码。类似于这种的例子，在开源代码里很多，我就不一一列举了，因为自己看的开源代码也只是少部分，要学的还有很多，要走的路还很长！！</p>
     </div>
 
     
@@ -183,7 +214,7 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2016-08-12</span>
+    <span class="item-content">2016-07-02</span>
   </p>
   
   
@@ -198,14 +229,14 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/about_winter_it/">
+          <a class="prev" href="/post/monitor_talk_again/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">寒冬来了，我们该怎么办</span>
+            <span class="prev-text nav-default">闲聊分布式日志收集</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/monitor_talk/">
-            <span class="next-text nav-default">聊聊监控的设计与开发</span>
+          <a class="next" href="/post/first-content/">
+            <span class="next-text nav-default">博客搬家</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
