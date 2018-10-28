@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bingtianbaihua.github.io/post/jinli_analysis/</loc>
+    <lastmod>2018-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://bingtianbaihua.github.io/about/</loc>
     <lastmod>2018-08-26T09:16:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -177,7 +184,7 @@
   
   <url>
     <loc>http://bingtianbaihua.github.io/post/</loc>
-    <lastmod>2017-04-04T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -190,7 +197,7 @@
   
   <url>
     <loc>http://bingtianbaihua.github.io/</loc>
-    <lastmod>2018-08-26T09:16:41+08:00</lastmod>
+    <lastmod>2018-10-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
