@@ -73,6 +73,15 @@
     </item>
     
     <item>
+      <title>如何设计并实现一个分布式 kv 存储（一）</title>
+      <link>http://bingtianbaihua.github.io/post/how_to_design_kv_storage/</link>
+      <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://bingtianbaihua.github.io/post/how_to_design_kv_storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>抵沪的第一天</title>
       <link>http://bingtianbaihua.github.io/post/evil_city/</link>
       <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
